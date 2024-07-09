@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "kurs-7-dz-24-1"
+version = "0.1.0"
+description = ""
+authors = ["leonid Petrov <leonidpetrov637@gmail.com>"]
+readme = "README.md"
+packages = [{include = "kurs_7_dz_24"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.6"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.1"
+djangorestframework = "^3.15.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
