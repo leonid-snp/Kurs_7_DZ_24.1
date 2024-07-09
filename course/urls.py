@@ -1,6 +1,6 @@
 from rest_framework.routers import SimpleRouter
-from course.views import CourseViewSet
 from course.apps import CourseConfig
+from course.views import CourseViewSet
 
 
 app_name = CourseConfig.name
