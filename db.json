@@ -520,9 +520,9 @@
     "pk": 1,
     "fields": {
       "date_payment": "2024-07-11",
-      "sum": null,
+      "sum": 100000,
       "cash_payment": null,
-      "payment_to_account": null,
+      "payment_to_account": true,
       "users": [
         1
       ],
@@ -537,8 +537,8 @@
     "pk": 2,
     "fields": {
       "date_payment": "2024-07-11",
-      "sum": null,
-      "cash_payment": null,
+      "sum": 120000,
+      "cash_payment": true,
       "payment_to_account": null,
       "users": [
         2
@@ -554,8 +554,8 @@
     "pk": 3,
     "fields": {
       "date_payment": "2024-07-11",
-      "sum": null,
-      "cash_payment": null,
+      "sum": 12000,
+      "cash_payment": true,
       "payment_to_account": null,
       "users": [
         3
