@@ -1,5 +1,6 @@
 from django.db import models
 from config.settings import NULLABLE
+from users.models import User
 
 
 class Course(models.Model):
@@ -17,6 +18,13 @@ class Course(models.Model):
     description = models.TextField(
         verbose_name='Описание',
         help_text='Напишите описание',
+        **NULLABLE
+    )
+    author = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        verbose_name='Автор',
+        help_text='Укажите автора курса',
         **NULLABLE
     )
 
