@@ -9,6 +9,9 @@ class LessonCreateApiView(CreateAPIView):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
 
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
 
 class LessonListApiView(ListAPIView):
     queryset = Lesson.objects.all()

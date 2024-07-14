@@ -2,6 +2,7 @@ from django.db import models
 
 from config.settings import NULLABLE
 from course.models import Course
+from users.models import User
 
 
 class Lesson(models.Model):
@@ -32,6 +33,13 @@ class Lesson(models.Model):
         max_length=255,
         verbose_name='Ссылка',
         help_text='Укажите ссылку',
+        **NULLABLE
+    )
+    author = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        verbose_name='Автор',
+        help_text='Укажите автора урока',
         **NULLABLE
     )
 
