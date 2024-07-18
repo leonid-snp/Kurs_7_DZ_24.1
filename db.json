@@ -350,6 +350,42 @@
     }
   },
   {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add Подписка",
+      "content_type": 10,
+      "codename": "add_subscription"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change Подписка",
+      "content_type": 10,
+      "codename": "change_subscription"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete Подписка",
+      "content_type": 10,
+      "codename": "delete_subscription"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view Подписка",
+      "content_type": 10,
+      "codename": "view_subscription"
+    }
+  },
+  {
     "model": "auth.group",
     "pk": 1,
     "fields": {
@@ -427,6 +463,14 @@
     "fields": {
       "app_label": "payment",
       "model": "payment"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "subscription",
+      "model": "subscription"
     }
   },
   {
@@ -590,6 +634,16 @@
     }
   },
   {
+    "model": "course.course",
+    "pk": 10,
+    "fields": {
+      "name": "Java",
+      "photo": "",
+      "description": null,
+      "author": 6
+    }
+  },
+  {
     "model": "lesson.lesson",
     "pk": 2,
     "fields": {
@@ -650,6 +704,18 @@
     }
   },
   {
+    "model": "lesson.lesson",
+    "pk": 7,
+    "fields": {
+      "course": null,
+      "name": "lesson_7",
+      "description": null,
+      "photo": "",
+      "url": "test@youtube.com",
+      "author": 6
+    }
+  },
+  {
     "model": "payment.payment",
     "pk": 1,
     "fields": {
@@ -698,6 +764,22 @@
       "paid_lesson": [
         2
       ]
+    }
+  },
+  {
+    "model": "subscription.subscription",
+    "pk": 1,
+    "fields": {
+      "user": 6,
+      "course": 3
+    }
+  },
+  {
+    "model": "subscription.subscription",
+    "pk": 2,
+    "fields": {
+      "user": 6,
+      "course": 7
     }
   }
 ]
