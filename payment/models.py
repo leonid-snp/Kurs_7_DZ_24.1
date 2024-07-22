@@ -18,13 +18,11 @@ class Payment(models.Model):
         Course,
         verbose_name='Курс',
         help_text='укажите курс',
-        **NULLABLE
     )
     paid_lesson = models.ManyToManyField(
         Lesson,
         verbose_name='Урок',
         help_text='Укажите урок',
-        **NULLABLE
     )
     sum = models.PositiveIntegerField(
         verbose_name='Сумма',
