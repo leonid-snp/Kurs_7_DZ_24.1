@@ -6,23 +6,28 @@ from users.models import User
 
 
 class Payment(models.Model):
-    users = models.ManyToManyField(
+    users = models.ForeignKey(
         User,
+        on_delete=models.CASCADE,
         verbose_name='Пользователь',
         help_text='Укажите пользователя',
     )
     date_payment = models.DateField(
         auto_now_add=True,
     )
-    paid_course = models.ManyToManyField(
+    paid_course = models.ForeignKey(
         Course,
+        on_delete=models.SET_NULL,
         verbose_name='Курс',
         help_text='укажите курс',
+        **NULLABLE
     )
-    paid_lesson = models.ManyToManyField(
+    paid_lesson = models.ForeignKey(
         Lesson,
+        on_delete=models.SET_NULL,
         verbose_name='Урок',
         help_text='Укажите урок',
+        **NULLABLE
     )
     sum = models.PositiveIntegerField(
         verbose_name='Сумма',
