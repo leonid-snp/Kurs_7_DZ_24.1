@@ -34,6 +34,18 @@ class Payment(models.Model):
         help_text='Укажите сумму',
         **NULLABLE
     )
+    session_id = models.CharField(
+        max_length=255,
+        verbose_name='Id сессии',
+        help_text='Укажите id сессии',
+        **NULLABLE
+    )
+    link = models.URLField(
+        max_length=400,
+        verbose_name='Ссылка на оплату',
+        help_text='Укажите ссылку на оплату',
+        **NULLABLE
+    )
     cash_payment = models.BooleanField(
         verbose_name='Наличные',
         help_text='Выберите наличные',
@@ -44,3 +56,10 @@ class Payment(models.Model):
         help_text='Выберите перевод на счет',
         **NULLABLE
     )
+
+    def __str__(self):
+        return self.sum
+
+    class Meta:
+        verbose_name = 'Платеж'
+        verbose_name_plural = 'Платежи'
