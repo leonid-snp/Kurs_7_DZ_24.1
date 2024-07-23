@@ -604,6 +604,26 @@
     }
   },
   {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$KEYO9zGHNpxCz0QCPqYrQt$koGyfnv/iEf6a5tagaCTEIgDTDGnmGbqYytzO64QQic=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-23T06:47:08.486Z",
+      "email": "test_6@test.ru",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
     "model": "course.course",
     "pk": 3,
     "fields": {
@@ -724,6 +744,8 @@
       "paid_course": 3,
       "paid_lesson": null,
       "sum": 100000,
+      "session_id": null,
+      "link": null,
       "cash_payment": null,
       "payment_to_account": true
     }
@@ -737,6 +759,8 @@
       "paid_course": 3,
       "paid_lesson": null,
       "sum": 120000,
+      "session_id": null,
+      "link": null,
       "cash_payment": true,
       "payment_to_account": null
     }
@@ -750,7 +774,54 @@
       "paid_course": null,
       "paid_lesson": 2,
       "sum": 12000,
+      "session_id": null,
+      "link": null,
       "cash_payment": true,
+      "payment_to_account": null
+    }
+  },
+  {
+    "model": "payment.payment",
+    "pk": 4,
+    "fields": {
+      "users": 7,
+      "date_payment": "2024-07-23",
+      "paid_course": 10,
+      "paid_lesson": null,
+      "sum": 1000,
+      "session_id": null,
+      "link": null,
+      "cash_payment": null,
+      "payment_to_account": null
+    }
+  },
+  {
+    "model": "payment.payment",
+    "pk": 5,
+    "fields": {
+      "users": 7,
+      "date_payment": "2024-07-23",
+      "paid_course": 10,
+      "paid_lesson": null,
+      "sum": 1000,
+      "session_id": null,
+      "link": null,
+      "cash_payment": null,
+      "payment_to_account": null
+    }
+  },
+  {
+    "model": "payment.payment",
+    "pk": 6,
+    "fields": {
+      "users": 7,
+      "date_payment": "2024-07-23",
+      "paid_course": 10,
+      "paid_lesson": null,
+      "sum": 1000,
+      "session_id": "cs_test_a1fmTCNChhVb7j3vF6cHS1VfHKRq4GvmkVqO5KmwpraLcf5RDtWjHOcfqJ",
+      "link": "https://checkout.stripe.com/c/pay/cs_test_a1fmTCNChhVb7j3vF6cHS1VfHKRq4GvmkVqO5KmwpraLcf5RDtWjHOcfqJ#fidkdWxOYHwnPyd1blpxYHZxWjA0VWNnYkc3SGJBQUpsTVNVN3NEY0FmUFc1Ul1hTGdrSlRoaHBDczZLc3NsazJHVjVgQkJpQTxEM18wV38xZkBENVRPVGtVaEFucW9DS0cyRjdjajZnSGdLNTVKaTU3VnJyNScpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+      "cash_payment": null,
       "payment_to_account": null
     }
   },
