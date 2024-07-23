@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_filters",
     'rest_framework_simplejwt',
+    'drf_yasg',
+    'drf_spectacular',
 
     "users",
     "course",
@@ -71,7 +73,8 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 DATABASES = {
@@ -121,3 +124,5 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
+
+STRIPE_API_KEY = os.getenv('STRIPE_API_KEY')

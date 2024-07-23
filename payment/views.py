@@ -5,11 +5,20 @@ from rest_framework.generics import (CreateAPIView, DestroyAPIView,
                                      UpdateAPIView)
 from payment.models import Payment
 from payment.serializer import PaymentSerializer
+from payment.services import create_stripe_price, create_stripe_sessions
 
 
 class PaymentCreateApiView(CreateAPIView):
     queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
+
+    def perform_create(self, serializer):
+        payment = serializer.save(users=self.request.user)
+        price = create_stripe_price(payment.sum)
+        session_id, payment_link = create_stripe_sessions(price)
+        payment.session_id = session_id
+        payment.link = payment_link
+        payment.save()
 
 
 class PaymentListApiView(ListAPIView):

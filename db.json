@@ -719,51 +719,39 @@
     "model": "payment.payment",
     "pk": 1,
     "fields": {
+      "users": 1,
       "date_payment": "2024-07-11",
+      "paid_course": 3,
+      "paid_lesson": null,
       "sum": 100000,
       "cash_payment": null,
-      "payment_to_account": true,
-      "users": [
-        1
-      ],
-      "paid_course": [
-        3
-      ],
-      "paid_lesson": []
+      "payment_to_account": true
     }
   },
   {
     "model": "payment.payment",
     "pk": 2,
     "fields": {
+      "users": 2,
       "date_payment": "2024-07-11",
+      "paid_course": 3,
+      "paid_lesson": null,
       "sum": 120000,
       "cash_payment": true,
-      "payment_to_account": null,
-      "users": [
-        2
-      ],
-      "paid_course": [
-        3
-      ],
-      "paid_lesson": []
+      "payment_to_account": null
     }
   },
   {
     "model": "payment.payment",
     "pk": 3,
     "fields": {
+      "users": 3,
       "date_payment": "2024-07-11",
+      "paid_course": null,
+      "paid_lesson": 2,
       "sum": 12000,
       "cash_payment": true,
-      "payment_to_account": null,
-      "users": [
-        3
-      ],
-      "paid_course": [],
-      "paid_lesson": [
-        2
-      ]
+      "payment_to_account": null
     }
   },
   {
