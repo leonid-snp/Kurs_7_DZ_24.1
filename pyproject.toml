@@ -26,6 +26,7 @@ stripe = "^10.4.0"
 forex-python = "^1.8"
 celery = "^5.4.0"
 redis = "^5.0.7"
+django-celery-beat = "^2.6.0"
 
 
 [build-system]
