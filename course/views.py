@@ -30,6 +30,6 @@ class CourseViewSet(ModelViewSet):
 
     def perform_update(self, serializer):
         course = serializer.save()
-        send_information_about_course(course)
+        send_information_about_course.delay(course)
         course.save()
 
