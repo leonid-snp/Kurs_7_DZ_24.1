@@ -2,8 +2,9 @@ from rest_framework.viewsets import ModelViewSet
 from course.models import Course
 from course.paginations import CustomPagination
 from course.serializer import CourseSerializer, CourseDetailSerializer
+from users.models import User
 from users.permissions import IsModer, IsOwner
-from course.tasks import add_number
+from course.tasks import send_information_about_course
 
 
 class CourseViewSet(ModelViewSet):
@@ -13,7 +14,6 @@ class CourseViewSet(ModelViewSet):
     def get_serializer_class(self):
         if self.action == 'retrieve':
             return CourseDetailSerializer
-        add_number.delay('Hello')
         return CourseSerializer
 
     def get_permissions(self):
@@ -27,3 +27,9 @@ class CourseViewSet(ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
+
+    def perform_update(self, serializer):
+        course = serializer.save()
+        send_information_about_course(course)
+        course.save()
+
