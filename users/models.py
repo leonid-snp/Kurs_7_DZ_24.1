@@ -1,3 +1,5 @@
+from django.utils.timezone import now
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from config.settings import NULLABLE
@@ -6,6 +8,10 @@ from config.settings import NULLABLE
 class User(AbstractUser):
     username = None
 
+    last_login = models.DateTimeField(
+        default=now(),
+        verbose_name="Время последнего посещения",
+    )
     email = models.EmailField(
         unique=True,
         verbose_name="Почта",
