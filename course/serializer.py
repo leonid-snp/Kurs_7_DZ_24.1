@@ -22,7 +22,6 @@ class CourseDetailSerializer(ModelSerializer):
         return [lesson.name for lesson in Lesson.objects.filter(course=course)]
 
     def get_subscription(self, course):
-        user = self.context['request'].user
         subscription = Subscription.objects.all().filter(course=course.id)
         if subscription:
             return True
