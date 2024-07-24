@@ -803,7 +803,7 @@
     "model": "django_celery_beat.periodictasks",
     "pk": 1,
     "fields": {
-      "last_update": "2024-07-24T16:44:02.617Z"
+      "last_update": "2024-07-24T17:06:24.657Z"
     }
   },
   {
