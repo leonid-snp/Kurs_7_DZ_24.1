@@ -44,6 +44,11 @@
 - в настройках https://mail.yandex.ru/?uid=1981646477#setup/client включить галочку на "С сервера imap.yandex.ru по протоколу IMAP"
 - настроить аккаунт для писем зарегистрировать пароль для почты https://id.yandex.ru/security/app-passwords и сохранить его в файл .env
 
+### для запуска функционала отправки уведомлений и периодических задач введите команду
+- celery -A config worker --beat --scheduler django --loglevel=info
+- - так же запустите redis-server
+- redis-server
+
 ### Чтобы запустить приложение в консоли введите команду
 - python manage.py runserver
 
