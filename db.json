@@ -39,6 +39,19 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2024-07-24T09:59:54.799Z",
+      "user": 5,
+      "content_type": 12,
+      "object_id": "6",
+      "object_repr": "test_5@test.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -790,7 +803,7 @@
     "model": "django_celery_beat.periodictasks",
     "pk": 1,
     "fields": {
-      "last_update": "2024-07-24T09:45:26.475Z"
+      "last_update": "2024-07-24T16:44:02.617Z"
     }
   },
   {
@@ -817,7 +830,7 @@
       "enabled": true,
       "last_run_at": null,
       "total_run_count": 0,
-      "date_changed": "2024-07-24T09:45:26.456Z",
+      "date_changed": "2024-07-24T16:44:02.599Z",
       "description": ""
     }
   },
@@ -843,9 +856,9 @@
       "one_off": false,
       "start_time": null,
       "enabled": true,
-      "last_run_at": "2024-07-24T09:45:26.526Z",
-      "total_run_count": 30,
-      "date_changed": "2024-07-24T09:45:26.543Z",
+      "last_run_at": "2024-07-24T16:53:02.738Z",
+      "total_run_count": 454,
+      "date_changed": "2024-07-24T16:53:02.751Z",
       "description": ""
     }
   },
@@ -918,7 +931,7 @@
       "first_name": "",
       "last_name": "",
       "is_staff": false,
-      "is_active": false,
+      "is_active": true,
       "date_joined": "2024-07-14T07:36:25Z",
       "last_login": "2024-07-14T07:36:25Z",
       "email": "test_4@test.ru",
@@ -960,14 +973,16 @@
       "first_name": "",
       "last_name": "",
       "is_staff": false,
-      "is_active": false,
+      "is_active": true,
       "date_joined": "2024-07-14T09:40:43.960Z",
       "last_login": "2024-07-14T09:40:43.960Z",
       "email": "test_5@test.ru",
       "phone": null,
       "city": null,
       "avatar": "",
-      "groups": [],
+      "groups": [
+        1
+      ],
       "user_permissions": []
     }
   },
@@ -984,6 +999,26 @@
       "date_joined": "2024-07-23T06:47:08.486Z",
       "last_login": "2024-07-23T06:47:08.486Z",
       "email": "test_6@test.ru",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$VdHw5hgT6ygLdLMt6DupMS$XSk8HW35Jt7ba9/7ot4Wp3Yg6JdF3yyLQTlil1DEJzs=",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2024-07-24T09:50:17.175Z",
+      "last_login": "2024-07-24T09:48:54.513Z",
+      "email": "test_7@test.ru",
       "phone": null,
       "city": null,
       "avatar": "",
