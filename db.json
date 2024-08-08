@@ -1027,26 +1027,6 @@
     }
   },
   {
-    "model": "users.user",
-    "pk": 7,
-    "fields": {
-      "password": "pbkdf2_sha256$720000$KEYO9zGHNpxCz0QCPqYrQt$koGyfnv/iEf6a5tagaCTEIgDTDGnmGbqYytzO64QQic=",
-      "last_login": null,
-      "is_superuser": false,
-      "first_name": "",
-      "last_name": "",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2024-07-23T06:47:08.486Z",
-      "email": "test_6@test.ru",
-      "phone": null,
-      "city": null,
-      "avatar": "",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
     "model": "course.course",
     "pk": 3,
     "fields": {
