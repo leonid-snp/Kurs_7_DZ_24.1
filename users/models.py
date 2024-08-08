@@ -9,7 +9,7 @@ class User(AbstractUser):
     username = None
 
     last_login = models.DateTimeField(
-        default=now(),
+        default=now,
         verbose_name="Время последнего посещения",
     )
     email = models.EmailField(
